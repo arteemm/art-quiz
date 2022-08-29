@@ -1,0 +1,17 @@
+.buttons {
+  background-color: $color-button;
+  cursor: pointer;
+  padding: 5px 15px;
+  @include font (1.6rem, 1.6rem, normal);
+  @extend %font-text;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    background-color: adjust-hue($color-button, 180deg);
+  }
+}
+
+.buttons-active {
+  background-color: adjust-hue($color-button, 180deg);
+}

@@ -1,0 +1,24 @@
+@import '../../node_modules/normalize-scss/sass/normalize';
+@include normalize();
+
+// abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+// base
+@import 'base/base';
+@import 'base/animations';
+@import 'base/buttons';
+@import 'base/links';
+
+// layout
+@import 'layout/wrapper';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/carContainer';
+
+// pages
+@import 'pages/garage';
+@import 'pages/winners';
+@import 'pages/error404';

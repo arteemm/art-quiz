@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  color: $color-black;
+  background-color: $color-link;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 5px 8px;
+  box-shadow: 4px 4px 19px 4px rgba(176, 231, 87, 0.3);
+  cursor: pointer;
+  transition: background-color .5s;
+  &:hover {
+    background-color: adjust-hue($color-link, 200deg);
+    box-shadow: 4px 4px 19px 4px rgba(190, 87, 231, 0.3);
+  }
+}

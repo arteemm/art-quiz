@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig-checks.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "Garage/*": ["src/pages/garage*"],
+      "Winners/*": ["src/pages/winners*"],
+      "Header/*": ["src/components/header*"],
+      "Footer/*": ["src/components/footer*"],
+      "Error404/*": ["src/pages/error404*"],
+   },
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "allowJs": true,
+    "moduleResolution": "node"
+  }
+}

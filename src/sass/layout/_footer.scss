@@ -1,0 +1,36 @@
+.footer {
+  background-color: $color-black;
+  padding: 15px 10px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__author, .footer__year {
+  color: $color-while;
+}
+
+.footer__author {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .5s;
+  &:hover {
+    color: $color-link;
+  }
+}
+
+.footer__rss {
+  .rss-icon {
+    display: block;
+    width: 120px;
+    height: 45px;
+    // background-image: url(../assets/svg/rss.svg);
+    transition: all 0.5s;
+  }
+  &:hover .rss-icon {
+    filter: invert(78%) sepia(57%) saturate(458%) hue-rotate(32deg) brightness(103%) contrast(86%);
+  }
+}
