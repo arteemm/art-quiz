@@ -6,12 +6,12 @@ import { MainPage } from '../src/pages';
 
 import { Header, Footer } from '../src/components';
 
-const mainPageInstance = new MainPage();
+const main = new MainPage().render();
 // const winnersInstance = new Winners();
 // const error404Instance = new Error404();
 
-const headerInstance = new Header();
-const footerInstance = new Footer();
+const header = new Header().render();
+const footer = new Footer().render();
 
 enum routes {
   home = '/',
@@ -19,13 +19,6 @@ enum routes {
 }
 
 (function createPage(): void {
-  const header = document.createElement('header') as HTMLElement;
-  const main = document.createElement('main') as HTMLElement;
-  const footer = document.createElement('footer') as HTMLElement;
-
-  header.classList.add('header');
-  footer.classList.add('footer');
-
   const body = null || (document.querySelector('body') as HTMLElement);
   body.appendChild(header);
   body.appendChild(main);
@@ -33,16 +26,6 @@ enum routes {
 })();
 
 const router = async () => {
-  const header = null || (document.querySelector('.header') as HTMLElement);
-  const content = null || (document.querySelector('main') as HTMLElement);
-  const footer = null || (document.querySelector('.footer') as HTMLElement);
-
-  header.innerHTML = await headerInstance.render();
-  await headerInstance.after_render();
-
-  footer.innerHTML = await footerInstance.render();
-  await footerInstance.after_render();
-
   const request = Utils.parseRequestURL();
 
   const parsedURL: string =
@@ -54,7 +37,7 @@ const router = async () => {
 
   switch (parsedURL) {
     case routes.home:
-      page = mainPageInstance;
+      page = main;
       break;
     // case routes.quiz:
     //   page = winnersInstance;
@@ -64,8 +47,7 @@ const router = async () => {
   }
 
   if (typeof page !== 'undefined') {
-    content.innerHTML = await page.render();
-    await page.after_render();
+    await page;
   }
 };
 

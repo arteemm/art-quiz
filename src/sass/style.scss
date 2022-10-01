@@ -1,6 +1,9 @@
 @import '../../node_modules/normalize-scss/sass/normalize';
 @include normalize();
 
+// font
+@import 'base/fonts';
+
 // abstracts
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
@@ -19,6 +22,5 @@
 @import 'layout/carContainer';
 
 // pages
-@import 'pages/garage';
-@import 'pages/winners';
+@import 'pages/main';
 @import 'pages/error404';

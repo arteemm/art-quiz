@@ -1,0 +1,29 @@
+.main {
+  padding-top: 270px;
+
+  &__title {
+    background-image: url(../assets/svg/main-title.svg);
+    width: 440px;
+    height: 165px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 165px;
+  }
+  
+  &__links {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+  
+    .artists-link, .pictures-link {
+      display: flex;
+      width: 287px;
+      height: 62px;
+      border-radius: 60px;
+      border: 1.5px solid #FFFFFF;
+      justify-content: center;
+      align-items: center;
+    }
+  }  
+}
