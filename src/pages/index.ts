@@ -1,4 +1,5 @@
 import MainPage from './Main';
 import Quiz from './Quiz';
+import ErrorPage from './Error';
 
-export { MainPage, Quiz };
+export { MainPage, Quiz, ErrorPage };

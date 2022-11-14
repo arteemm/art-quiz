@@ -1,10 +1,19 @@
 import { Link, createWrapper } from '../../components';
 
-class ManePage {
+class MainPage {
+  typeQuiz: string;
+
+  constructor() {
+    this.typeQuiz = '';
+  }
+
   private createArtistLink() {
     const link = new Link({
       label: 'Artist quiz',
-      ref: '/quiz',
+      ref: '#/quiz',
+      onClick: () => {
+        this.typeQuiz = 'artist';
+      },
     }).render();
     link.classList.add('artists-link');
 
@@ -14,7 +23,10 @@ class ManePage {
   private createPictureLink() {
     const link = new Link({
       label: 'Picture quiz',
-      ref: '/quiz',
+      ref: '#/quiz',
+      onClick: () => {
+        this.typeQuiz = 'picture';
+      },
     }).render();
     link.classList.add('pictures-link');
 
@@ -55,4 +67,4 @@ class ManePage {
   }
 }
 
-export default ManePage;
+export default MainPage;
